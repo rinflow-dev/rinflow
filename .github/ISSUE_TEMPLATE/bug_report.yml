@@ -1,0 +1,55 @@
+name: Bug report
+description: Something does not work as it should
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        For security problems, please follow [SECURITY.md](https://github.com/rinflow-dev/rinflow/blob/main/SECURITY.md) instead of opening an issue.
+  - type: checkboxes
+    id: platforms
+    attributes:
+      label: Platforms involved
+      options:
+        - label: macOS
+        - label: Windows
+  - type: input
+    id: version
+    attributes:
+      label: Rinflow version
+      description: On each device, if they differ.
+      placeholder: 0.1.0
+    validations:
+      required: true
+  - type: input
+    id: devices
+    attributes:
+      label: Devices
+      description: Operating system and version of each device involved.
+      placeholder: Windows 11 24H2 (controlling), macOS 15.1 (controlled)
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Pair the two devices
+        2. Push the pointer through the right edge
+        3. ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected, and what happened instead
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      description: >-
+        Windows: %LOCALAPPDATA%\Rinflow\logs\agent.log. macOS: Console.app, filtered by
+        com.rinflow.mac. Please remove device names and addresses you do not want to share.
+      render: text
