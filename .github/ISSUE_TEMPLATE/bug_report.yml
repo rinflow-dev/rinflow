@@ -13,6 +13,7 @@ body:
       options:
         - label: macOS
         - label: Windows
+        - label: Linux
   - type: input
     id: version
     attributes:
@@ -51,5 +52,6 @@ body:
       label: Logs
       description: >-
         Windows: %LOCALAPPDATA%\Rinflow\logs\agent.log. macOS: Console.app, filtered by
-        com.rinflow.mac. Please remove device names and addresses you do not want to share.
+        com.rinflow.mac. Linux: journalctl --user -u rinflow-agent. Please remove device names
+        and addresses you do not want to share.
       render: text

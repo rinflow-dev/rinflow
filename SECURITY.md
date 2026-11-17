@@ -8,7 +8,7 @@ Rinflow lets a connected device inject keyboard and mouse input and exchange cli
 
 Please include:
 
-- the affected app (macOS, Windows or core) and its version;
+- the affected app (macOS, Windows, Linux or core) and its version;
 - the operating systems involved;
 - steps to reproduce, and what an attacker gains;
 - whether the attacker needs to be on the same network, or paired.
